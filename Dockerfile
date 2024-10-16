@@ -33,7 +33,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY rootfs /
-chmod a+x /etc/cupsfilters/rastertodlabel
+RUN chmod a+x /etc/cupsfilters/rastertodlabel
 
 # Add user and disable sudo password checking
 RUN useradd \
